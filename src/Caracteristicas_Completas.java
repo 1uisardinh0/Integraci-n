@@ -53,9 +53,7 @@ public class Caracteristicas_Completas {
                 """);
     }
 
-    public static void sumar(){
-
-    }
+    public static void sumar(){}
 
     public static void restar(){}
 
