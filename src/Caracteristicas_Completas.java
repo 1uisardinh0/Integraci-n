@@ -16,30 +16,18 @@ public class Caracteristicas_Completas {
         String opcion = entrada.nextLine();
 
 
-        if (opcion.equals("1")){
-            sumar();
-        }
-        else if (opcion.equals("2")){
-            restar();
-        }
-        else if (opcion.equals("3")){
-            multiplicar();
-        }
-        else if (opcion.equals("4")){
-            dividir();
-        }
-        else if (opcion.equals("5")){
-            cuadrado();
-        }
-        else if (opcion.equals("6")){
-            cubo();
-        }
-        else {
-            System.out.println("Opcion invalida. Intente nuevamente");
+        switch (opcion) {
+            case "1" -> sumar();
+            case "2" -> restar();
+            case "3" -> multiplicar();
+            case "4" -> dividir();
+            case "5" -> cuadrado();
+            case "6" -> cubo();
+            default -> System.out.println("Opcion invalida. Intente nuevamente");
         }
     }
 
-    public static void mostrar_menu(){
+    public static void mostrar_menu(){ //Muestra el menu del programa junto a sus opciones
         System.out.println("""
                 ---Bienvenido a la Calculadora---
                 
