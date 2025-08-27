@@ -15,7 +15,7 @@ public class Caracteristicas_Completas {
         Scanner entrada = new Scanner(System.in);
         String opcion = entrada.nextLine();
 
-
+        //Permite eligir una opcion por consola en base a un dato.
         switch (opcion) {
             case "1" -> sumar();
             case "2" -> restar();
@@ -27,7 +27,8 @@ public class Caracteristicas_Completas {
         }
     }
 
-    public static void mostrar_menu(){ //Muestra el menu del programa junto a sus opciones
+    //Muestra el menu del programa junto a sus opciones
+    public static void mostrar_menu(){
         System.out.println("""
                 ---Bienvenido a la Calculadora---
                 
@@ -41,15 +42,21 @@ public class Caracteristicas_Completas {
                 """);
     }
 
+    //Metodo para operacion sumar.
     public static void sumar(){}
 
+    //Metodo para operacion restar.
     public static void restar(){}
 
+    //Metodo para operacion multiplicar.
     public static void multiplicar(){}
 
+    //Metodo para operacion dividir.
     public static void dividir(){}
 
+    //Metodo para elevar un numero al cuadrado.
     public static void cuadrado(){}
 
+    //Metodo para elevar un numero al cubo.
     public static void cubo(){}
 }
