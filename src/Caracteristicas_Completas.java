@@ -9,25 +9,33 @@ public class Caracteristicas_Completas {
 
     //Metodo que controla el flujo del código.
     public static void menu(){
-        mostrar_menu();
-
-        //Pide un dato por consola y lo guarda en una variable.
         Scanner entrada = new Scanner(System.in);
-        String opcion = entrada.nextLine();
+        boolean salir = false;
 
-        //Permite eligir una opcion por consola en base a un dato.
-        switch (opcion) {
-            case "1" -> sumar();
-            case "2" -> restar();
-            case "3" -> multiplicar();
-            case "4" -> dividir();
-            case "5" -> cuadrado();
-            case "6" -> cubo();
-            default -> System.out.println("Opcion invalida. Intente nuevamente");
+        do {
+            mostrar_menu();
+
+            //Pide un dato por consola y lo guarda en una variable.
+            String opcion = entrada.nextLine();
+
+            //Permite eligir una opcion por consola en base a un dato.
+            switch (opcion) {
+                case "1" -> sumar();
+                case "2" -> restar();
+                case "3" -> multiplicar();
+                case "4" -> dividir();
+                case "5" -> cuadrado();
+                case "6" -> cubo();
+                case "7" -> salir = true;
+                default -> System.out.println("Opcion invalida. Intente nuevamente");
+            }
         }
+
+        while (!salir);
+        System.out.println("Gracias por usar la calculadora...");
     }
 
-    //Muestra el menu del programa junto a sus opciones
+    //Muestra el menu del programa junto a sus opciones.
     public static void mostrar_menu(){
         System.out.println("""
                 ---Bienvenido a la Calculadora---
@@ -39,24 +47,94 @@ public class Caracteristicas_Completas {
                 4. Dividir
                 5. Cuadrado
                 6. Cubo
+                7. Salir
                 """);
     }
 
-    //Metodo para operacion sumar.
-    public static void sumar(){}
+    //Metodo para operación sumar.
 
-    //Metodo para operacion restar.
-    public static void restar(){}
+    public static void sumar(){
+        int num1, num2;
+        Scanner  entrada = new Scanner(System.in);
 
-    //Metodo para operacion multiplicar.
-    public static void multiplicar(){}
+        System.out.println("Ingrese el primer número...");
+        num1 = entrada.nextInt();
+        System.out.println("Ingrese el segundo número...");
+        num2 = entrada.nextInt();
 
-    //Metodo para operacion dividir.
-    public static void dividir(){}
+        int resultado  = num1 + num2;
+
+        System.out.println("El resultado es: " + resultado);
+    }
+
+    //Metodo para operación restar.
+    public static void restar(){
+        int num1, num2;
+        Scanner  entrada = new Scanner(System.in);
+
+        System.out.println("Ingrese el primer número...");
+        num1 = entrada.nextInt();
+        System.out.println("Ingrese el segundo número...");
+        num2 = entrada.nextInt();
+
+        int resultado  = num1 - num2;
+
+        System.out.println("El resultado es: " + resultado);
+    }
+
+    //Metodo para operación multiplicar.
+    public static void multiplicar(){
+        int num1, num2;
+        Scanner  entrada = new Scanner(System.in);
+
+        System.out.println("Ingrese el primer número...");
+        num1 = entrada.nextInt();
+        System.out.println("Ingrese el segundo número...");
+        num2 = entrada.nextInt();
+
+        int resultado  = num1 * num2;
+
+        System.out.println("El resultado es: " + resultado);
+    }
+
+    //Metodo para operación dividir.
+    public static void dividir(){
+        int num1, num2;
+        Scanner  entrada = new Scanner(System.in);
+
+        System.out.println("Ingrese el primer número...");
+        num1 = entrada.nextInt();
+        System.out.println("Ingrese el segundo número...");
+        num2 = entrada.nextInt();
+
+        int resultado  = num1 / num2;
+
+        System.out.println("El resultado es: " + resultado);
+    }
 
     //Metodo para elevar un numero al cuadrado.
-    public static void cuadrado(){}
+    public static void cuadrado(){
+        int num;
+        Scanner  entrada = new Scanner(System.in);
+
+        System.out.println("Ingrese el número...");
+        num = entrada.nextInt();
+
+        int resultado  = num * num;
+
+        System.out.println("El resultado es: " + resultado);
+    }
 
     //Metodo para elevar un numero al cubo.
-    public static void cubo(){}
+    public static void cubo(){
+        int num;
+        Scanner  entrada = new Scanner(System.in);
+
+        System.out.println("Ingrese el número...");
+        num = entrada.nextInt();
+
+        int resultado = (num * num) * num;
+
+        System.out.println("El resultado es: " + resultado);
+    }
 }
