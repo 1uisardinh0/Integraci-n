@@ -26,7 +26,8 @@ public class Caracteristicas_Completas {
                 case "4" -> dividir();
                 case "5" -> cuadrado();
                 case "6" -> cubo();
-                case "7" -> salir = true;
+                case "7" -> tablaMultiplicar();
+                case "8" -> salir = true;
                 default -> System.out.println("Opcion invalida. Intente nuevamente");
             }
         }
@@ -47,7 +48,8 @@ public class Caracteristicas_Completas {
                 4. Dividir
                 5. Cuadrado
                 6. Cubo
-                7. Salir
+                7. Tabla de Multiplicar.
+                8. Salir
                 """);
     }
 
@@ -136,5 +138,20 @@ public class Caracteristicas_Completas {
         int resultado = (num * num) * num;
 
         System.out.println("El resultado es: " + resultado);
+    }
+
+    //Metodo que permite ver la tabla de multiplicar de un número.
+    public static void tablaMultiplicar(){
+        Scanner  entrada = new Scanner(System.in);
+        int multiplicador = 1;
+        int numero;
+
+        System.out.println("Escriba el número...");
+        numero = entrada.nextInt();
+
+        while (multiplicador <= 10) {
+            System.out.println(numero + " x " + multiplicador + " = " + numero * multiplicador);
+            multiplicador++;
+        }
     }
 }
